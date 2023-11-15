@@ -51,7 +51,7 @@ This Python script is a simple brute force solver for popular New York Times wor
 
 This program uses the wordlist from [dwyl/english-words](https://github.com/dwyl/english-words). Check out their repository for more information and explore their other projects.
 
-Please note that the wordlist is provided under the [Unlicense](https://unlicense.org/), and you should review and comply with their licensing terms.
+Please note that the wordlist is provided under the [Unlicense](https://unlicense.org/) (this link migth not work work, but it is the same as in their LICENSE.md), and you should review and comply with their licensing terms.
 
 ## Disclaimer
 
