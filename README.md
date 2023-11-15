@@ -47,6 +47,12 @@ This Python script is a simple brute force solver for popular New York Times wor
   - Provide feedback based on the letters guessed.
   - The script will generate new guesses until the target word is found.
 
+## Acknowledgment
+
+This program uses the wordlist from [dwyl/english-words](https://github.com/dwyl/english-words). Check out their repository for more information and explore their other projects.
+
+Please note that the wordlist is provided under the [Unlicense](https://unlicense.org/), and you should review and comply with their licensing terms.
+
 ## Disclaimer
 
 This script is provided as-is and comes with no guarantees or warranties. Use it responsibly and in accordance with the terms of service of the respective games.
