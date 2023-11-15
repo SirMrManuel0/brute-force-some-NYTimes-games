@@ -16,7 +16,7 @@ This Python script is a simple brute force solver for popular New York Times wor
 1. Clone this repository to your local machine.
 
     ```bash
-    git clone https://github.com/your-username/nytimes-games-solver.git
+    git clone https://github.com/SirMrManuel0/brute-force-some-NYTimes-games.git
     ```
 
 2. Install the required dependencies.
