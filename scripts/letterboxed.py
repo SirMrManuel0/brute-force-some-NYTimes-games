@@ -27,8 +27,6 @@ def two_word_solution(words, letters):
     counter = 0
     for a, b in itertools.combinations(words, 2):
         if a[-1] == b[0] and len(a) + len(b) >= 12 and {letter for letter in a} | {letter for letter in b} == letters:
-            if counter == 25:                                                                                                                 ####################
-                break
             GREEN = '\033[92m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{GREEN}> two word solutions > possible combination > {(a,b)}{RESET}")
