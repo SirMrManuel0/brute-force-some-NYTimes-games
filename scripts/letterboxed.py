@@ -24,84 +24,120 @@ def has_not_two_char_same_row(word, letters):
 
 
 def two_word_solution(words, letters):
+    counter = 0
     for a, b in itertools.combinations(words, 2):
         if a[-1] == b[0] and len(a) + len(b) >= 12 and {letter for letter in a} | {letter for letter in b} == letters:
+            if count == 25:                                                                                                                 ####################
+                break
             GREEN = '\033[92m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{GREEN}> two word solutions > possible combination > {(a,b)}{RESET}")
+            counter += 1
     
 def three_word_solution(words, letters):
+    counter = 0
     for a, b, c in itertools.combinations(words, 3):
         if a[-1] == b[0] and b[-1] == c[0] and len(a) + len(b) + len(c) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             YELLOW = '\033[93m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{YELLOW}> three word solutions > possible combination > {(a,b,c)}{RESET}")
+            counter += 1
     
 def four_word_solution(words, letters):
+    counter = 0
     for a, b, c, d in itertools.combinations(words, 4):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and len(a) + len(b) + len(c) + len(d) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | {letter for letter in d} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             BLUE = '\033[94m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{BLUE}> four word solutions > possible combination > {(a,b,c,d)}{RESET}")
+            counter += 1
             
 def five_word_solution(words, letters):
+    counter = 0
     for a, b, c, d, e in itertools.combinations(words, 5):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and len(a) + len(b) + len(c) + len(d) + len(e) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             MAGENTA = '\033[95m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{MAGENTA}> five word solutions > possible combination > {(a,b,c,d,e)}{RESET}")
+            counter += 1
             
 def six_word_solution(words, letters):
+    counter = 0
     for a, b, c, d, e, f in itertools.combinations(words, 6):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and len(a) + len(b) + len(c) + len(d) + len(e) + len(f) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             CYAN = '\033[96m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{CYAN}> six word solutions > possible combination > {(a,b,c,d,e,f)}{RESET}")
+            counter += 1
             
 def seven_word_solution(words, letters):
+    counter = 0
     for a, b, c, d, e, f, g in itertools.combinations(words, 7):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | {letter for letter in g} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             RED = '\033[91m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{RED}> seven word solutions > possible combination > {(a,b,c,d,e,f,g)}{RESET}")
+            counter += 1
             
 def eight_word_solution(words, letters):
+    counter = 0
     for a, b, c, d, e, f, g, h in itertools.combinations(words, 8):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
             {letter for letter in g} | {letter for letter in h} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             ORANGE = '\033[38;5;208m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{ORANGE}> eight word solutions > possible combination > {(a,b,c,d,e,f,g,h)}{RESET}")
+            counter += 1
         
 def nine_word_solution(words, letters):
+    counter = 0
     for a, b, c, d, e, f, g, h, i in itertools.combinations(words, 9):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] and i[-1] == i[0] \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
             {letter for letter in g} | {letter for letter in h} | {letter for letter in i} == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             PURPLE = '\033[38;5;129m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{PURPLE}> nine word solutions > possible combination > {(a,b,c,d,e,f,g,h,i)}{RESET}")
+            counter += 1
             
 def ten_word_solution(words, letters):
+    counter = 0
     for a, b, c, d, e, f, g, h, i, j in itertools.combinations(words, 10):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] and i[-1] == i[0] and j[-1] == j[0] \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
             {letter for letter in g} | {letter for letter in h} | {letter for letter in i} | {letter for letter in j}  == letters:
+            if counter == 25:                                                                                                                 ####################
+                break
             GRAY = '\033[38;5;240m'
             RESET = '\033[0m'  # Reset to default color
             print(f"{GRAY}> ten word solutions > possible combination > {(a,b,c,d,e,f,g,h,i,j)}{RESET}")
+            counter += 1
 
 
 def index():
@@ -142,6 +178,9 @@ def index():
         
         It is possible that some solutions do not work as the NYTimes game Letter Boxed does not have certain words in its list.
         
+        max. 251 combinations if you want to change, it do it in the code.
+        scripts/letterboxed.py
+        search the lines with 20 #
         
         
         """
