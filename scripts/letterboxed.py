@@ -156,20 +156,20 @@ def index():
     
     
     while True:
-        #letters = (
-        #        (input("1: ").lower(), input("2: ").lower(), input("3: ").lower()), 
-        #        (input("4: ").lower(), input("5: ").lower(), input("6: ").lower()), 
-        #        (input("7: ").lower(), input("8: ").lower(), input("9: ").lower()),
-        #        (input("10: ").lower(), input("11: ").lower(), input("12: ").lower())
-        #    )
-        
-        
         letters = (
-            ("i", "y", "a"),
-            ("b", "k", "m"),
-            ("h", "e", "l"),
-            ("t", "c", "o")
+                (input("1: ").lower(), input("2: ").lower(), input("3: ").lower()), 
+                (input("4: ").lower(), input("5: ").lower(), input("6: ").lower()), 
+                (input("7: ").lower(), input("8: ").lower(), input("9: ").lower()),
+                (input("10: ").lower(), input("11: ").lower(), input("12: ").lower())
         )
+        
+        
+        #letters = (
+        #    ("i", "y", "a"),
+        #    ("b", "k", "m"),
+        #    ("h", "e", "l"),
+        #    ("t", "c", "o")
+        #)
         
         
         if all([is_char(i) for ii in letters for i in ii]):
