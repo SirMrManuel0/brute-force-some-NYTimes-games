@@ -24,115 +24,103 @@ def has_not_two_char_same_row(word, letters):
 
 
 def two_word_solution(words, letters):
-    combinations = [
-        (a, b)
-        for a, b in itertools.combinations(words, 2)
-        if a[-1] == b[0] and len(a) + len(b) >= 12
-        and {letter for letter in a} | {letter for letter in b} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> two word solutions > possible combination > {combination}")
+    for a, b in itertools.combinations(words, 2):
+        if a[-1] == b[0] and len(a) + len(b) >= 12 and {letter for letter in a} | {letter for letter in b} == letters:
+            GREEN = '\033[92m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{GREEN}> two word solutions > possible combination > {(a,b)}{RESET}")
     
 def three_word_solution(words, letters):
-    combinations = [
-        (a, b, c) 
-        for a, b, c in itertools.combinations(words, 3)
-        if a[-1] == b[0] and b[-1] == c[0] and len(a) + len(b) + len(c) >= 12
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> three word solutions > possible combination > {combination}")
+    for a, b, c in itertools.combinations(words, 3):
+        if a[-1] == b[0] and b[-1] == c[0] and len(a) + len(b) + len(c) >= 12 \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} == letters:
+            YELLOW = '\033[93m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{YELLOW}> three word solutions > possible combination > {(a,b,c)}{RESET}")
     
 def four_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d)
-        for a, b, c, d in itertools.combinations(words, 4)
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and len(a) + len(b) + len(c) + len(d) >= 12
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | {letter for letter in d} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> four word solutions > possible combination > {combination}")
+    for a, b, c, d in itertools.combinations(words, 4):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and len(a) + len(b) + len(c) + len(d) >= 12 \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | {letter for letter in d} == letters:
+            BLUE = '\033[94m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{BLUE}> four word solutions > possible combination > {(a,b,c,d)}{RESET}")
             
 def five_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d, e)
-        for a, b, c, d, e in itertools.combinations(words, 5)
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and len(a) + len(b) + len(c) + len(d) + len(e) >= 12
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | 
-        {letter for letter in d} | {letter for letter in e} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> five word solutions > possible combination > {combination}")
+    for a, b, c, d, e in itertools.combinations(words, 5):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and len(a) + len(b) + len(c) + len(d) + len(e) >= 12 \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
+            {letter for letter in d} | {letter for letter in e} == letters:
+            MAGENTA = '\033[95m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{MAGENTA}> five word solutions > possible combination > {(a,b,c,d,e)}{RESET}")
             
 def six_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d, e, f) 
-        for a, b, c, d, e, f in itertools.combinations(words, 6) 
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and len(a) + len(b) + len(c) + len(d) + len(e) + len(f) >= 12
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | 
-        {letter for letter in d} | {letter for letter in e} | {letter for letter in f} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> six word solutions > possible combination > {combination}")
+    for a, b, c, d, e, f in itertools.combinations(words, 6):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and len(a) + len(b) + len(c) + len(d) + len(e) + len(f) >= 12 \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
+            {letter for letter in d} | {letter for letter in e} | {letter for letter in f} == letters:
+            CYAN = '\033[96m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{CYAN}> six word solutions > possible combination > {(a,b,c,d,e,f)}{RESET}")
             
 def seven_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d, e, f, g) 
-        for a, b, c, d, e, f, g in itertools.combinations(words, 7) 
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0]
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | 
-        {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | {letter for letter in g} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> seven word solutions > possible combination > {combination}")
+    for a, b, c, d, e, f, g in itertools.combinations(words, 7):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
+            {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | {letter for letter in g} == letters:
+            RED = '\033[91m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{RED}> seven word solutions > possible combination > {(a,b,c,d,e,f,g)}{RESET}")
             
 def eight_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d, e, f, g, h) 
-        for a, b, c, d, e, f, g, h in itertools.combinations(words, 8) 
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0]
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | 
-        {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | 
-        {letter for letter in g} | {letter for letter in h} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> eight word solutions > possible combination > {combination}")
+    for a, b, c, d, e, f, g, h in itertools.combinations(words, 8):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
+            {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
+            {letter for letter in g} | {letter for letter in h} == letters:
+            ORANGE = '\033[38;5;208m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{ORANGE}> eight word solutions > possible combination > {(a,b,c,d,e,f,g,h)}{RESET}")
         
 def nine_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d, e, f, g, h, i) 
-        for a, b, c, d, e, f, g, h, i in itertools.combinations(words, 9) 
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] and i[-1] == i[0]
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | 
-        {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | 
-        {letter for letter in g} | {letter for letter in h} | {letter for letter in i} == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> nine word solutions > possible combination > {combination}")
+    for a, b, c, d, e, f, g, h, i in itertools.combinations(words, 9):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] and i[-1] == i[0] \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
+            {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
+            {letter for letter in g} | {letter for letter in h} | {letter for letter in i} == letters:
+            PURPLE = '\033[38;5;129m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{PURPLE}> nine word solutions > possible combination > {(a,b,c,d,e,f,g,h,i)}{RESET}")
             
 def ten_word_solution(words, letters):
-    combinations = [
-        (a, b, c, d, e, f, g, h, i, j) 
-        for a, b, c, d, e, f, g, h, i, j in itertools.combinations(words, 10) 
-        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] and i[-1] == i[0] and j[-1] == j[0]
-        and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | 
-        {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | 
-        {letter for letter in g} | {letter for letter in h} | {letter for letter in i} | {letter for letter in j}  == letters
-    ]
-    
-    for combination in combinations:
-        print(f"> ten word solutions > possible combination > {combination}")
+    for a, b, c, d, e, f, g, h, i, j in itertools.combinations(words, 10):
+        if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and g[-1] == g[0] and h[-1] == h[0] and i[-1] == i[0] and j[-1] == j[0] \
+            and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
+            {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
+            {letter for letter in g} | {letter for letter in h} | {letter for letter in i} | {letter for letter in j}  == letters:
+            GRAY = '\033[38;5;240m'
+            RESET = '\033[0m'  # Reset to default color
+            print(f"{GRAY}> ten word solutions > possible combination > {(a,b,c,d,e,f,g,h,i,j)}{RESET}")
 
 
 def index():
+    
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    MAGENTA = '\033[95m'
+    CYAN = '\033[96m'
+    RED = '\033[91m'
+    ORANGE = '\033[38;5;208m'
+    PURPLE = '\033[38;5;129m'
+    GRAY = '\033[38;5;240m'
+    RESET = '\033[0m'  # Reset to default color
+    
+    
+    
+    
+    
     print(
         """
      _     _____ _____ _____ _____ ____    ____   _____  _______ ____  
@@ -149,6 +137,11 @@ def index():
                                 6   |_______|   10
                             
                                      7  8  9
+        
+        There will be 1, """ + GREEN + """2""" + RESET + """, """ + YELLOW + """3""" + RESET + """, """ + BLUE + """4""" + RESET + """, """ + MAGENTA + """5""" + RESET + """, """ + CYAN + """6""" + RESET + """, """ + RED + """7""" + RESET + """, """ + ORANGE + """8""" + RESET + """, """ + PURPLE + """9""" + RESET + """, """ + GRAY + """10""" + RESET + """ word solutions.
+        
+        It is possible that some solutions do not work as the NYTimes game Letter Boxed does not have certain words in its list.
+        
         
         
         """
@@ -224,14 +217,8 @@ def index():
     for thread in threads:
         thread.join()
 
-    # Collect results and print elapsed times
-    
-    for thread in threads:
-        thread_elapsed_time = timeit.default_timer() - times[thread.name]
-        print(f"To find a {thread.name} word solution {thread_elapsed_time:.4f} seconds were needed.")
-
         
-    print("All threads completed.")
+    print("\n\n\nThese were all solutions possible with the word list.")
 
     
 
