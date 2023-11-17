@@ -19,22 +19,16 @@ This Python script is a simple brute force solver for popular New York Times wor
     git clone https://github.com/SirMrManuel0/brute-force-some-NYTimes-games.git
     ```
 
-2. Install the required dependencies.
+2. Run the script with the desired game mode.
 
     ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Run the script with the desired game mode.
-
-    ```bash
-    python solver.py letterboxed
+    python main.py letterboxed
     ```
 
     or
 
     ```bash
-    python solver.py wordle
+    python main.py wordle
     ```
 
 ## Usage
