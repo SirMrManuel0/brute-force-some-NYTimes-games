@@ -1,14 +1,14 @@
 import json
 
 
-
+# Dictionary to map color codes to numbers
 numV = {
     "b": 0,
     "y": 1,
     "g": 2
 }
 
-
+# Function to check if a character is not a number
 def is_not_a_number(c):
     try:
         float(c)
@@ -16,10 +16,10 @@ def is_not_a_number(c):
     except ValueError:
         return True
 
-
+# Function to filter words based on user input
 def filter_words(word, words):
-    
     while True:
+        # Prompt user for input for each letter in the word
         inputs = {
             word[0]: input(word[0].upper() + ": ").lower(),
             word[1]: input(word[1].upper() + ": ").lower(),
@@ -28,13 +28,16 @@ def filter_words(word, words):
             word[4]: input(word[4].upper() + ": ").lower()
         }
         
+        # Check if the input is valid (single character, not a number, and in the valid color set)
         if all([len(i) == 1 and is_not_a_number(i) and i in (key for key, val in numV.items()) for key, i in inputs.items()]):
             break
         else:
             print("\nWrong input!\n")
     
+    # Map user input to color codes
     inputs = {key: numV[val] for key, val in inputs.items()}
     
+    # Filter words based on the user's input
     for index, vals in enumerate(inputs.items()):
         letter = vals[0]
         val = vals[1]
@@ -48,9 +51,9 @@ def filter_words(word, words):
     
     return words
 
-
+# Function to display the Wordle game solver
 def index():
-    
+    # Define color codes for console output
     GREEN = '\033[92m'
     YELLOW = '\033[93m'
     BLUE = '\033[94m'
@@ -62,7 +65,7 @@ def index():
     GRAY = '\033[38;5;240m'
     RESET = '\033[0m'  # Reset to default color
     
-    
+    # Display Wordle instructions
     print(""" 
     __        _____  ____  ____  _     _____ 
     \ \      / / _ \|  _ \|  _ \| |   | ____|
@@ -99,12 +102,13 @@ def index():
               
     """)    
     
+    # Load words from a JSON file
     words = {}
-    
     with open("english-words/words_dictionary_wordle.json", "r", encoding="utf-8") as f:
         words = json.load(f)
         words = [word for word, value in words.items()]
     
+    # Filter words based on the initial word "SALET"
     words = filter_words("salet", words)
 
     while True:
