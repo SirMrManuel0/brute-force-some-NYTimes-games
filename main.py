@@ -1,12 +1,13 @@
 import argparse
 from scripts import letterboxed
+from scripts import wordle
 
 
 def handle_command(args):
     if args.game == "letterboxed":
         letterboxed.index()
     elif args.game == "wordle":
-        ...
+        wordle.index()
     else:
         print(f"Unknown command: {args.command}")
 
