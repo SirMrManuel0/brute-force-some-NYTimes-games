@@ -19,7 +19,7 @@ with open('english-words\words_dictionary.json', 'r', encoding="utf-8") as impor
 json_data = {key.lower(): value for key, value in json_data.items()}
 
 # Define the set of valid keys
-valid_keys = {key for key, value in json_data.items() if len(key) > 2 and doesnt_has_twice_the_same(key)}
+valid_keys = {key for key, value in json_data.items() if len(key) > 3 and doesnt_has_twice_the_same(key)}
 
 # Filter the keys and set their values to None
 filtered_json_data = {key: 1 for key in valid_keys}
