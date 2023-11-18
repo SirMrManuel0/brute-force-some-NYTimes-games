@@ -8,8 +8,8 @@ This Python script is a simple brute force solver for popular New York Times wor
 
 ## Features
 
-- **Letter Boxed Solver:** Finds words that can be formed using the given set of letters in the Letter Boxed game.
-- **Wordle Solver:** Attempts to guess the target word in the Wordle game by trying different combinations based on feedback.
+- **Letter Boxed Solver:** Finds word combinations that can be formed using the given set of letters in the Letter Boxed game.
+- **Wordle Solver:** Attempts to guess the target word in the Wordle game by listining to user feedback until the right word is found.
 
 ## Getting Started
 
