@@ -110,6 +110,7 @@ def index():
     while True:
         try:
             if len(words) == 1:
+                print()
                 print(words[0])
                 print()
                 print("Hopefully this is right.")
