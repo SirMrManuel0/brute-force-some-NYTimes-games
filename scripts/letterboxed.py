@@ -25,16 +25,11 @@ def has_not_two_char_same_row(word, letters):
 
 # Functions to find solutions with different word lengths
 def two_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of two words from the provided list
     for a, b in itertools.combinations(words, 2):
         # Check conditions for a valid solution
         if a[-1] == b[0] and len(a) + len(b) >= 12 and {letter for letter in a} | {letter for letter in b} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             GREEN = '\033[92m'
@@ -42,22 +37,14 @@ def two_word_solution(words, letters):
             
             # Print the possible combination
             print(f"{GREEN}> two word solutions > possible combination > {(a,b)}{RESET}")
-            
-            # Increment the counter
-            counter += 1
     
 def three_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of three words from the provided list
     for a, b, c in itertools.combinations(words, 3):
         # Check conditions for a valid solution
         if a[-1] == b[0] and b[-1] == c[0] and len(a) + len(b) + len(c) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             YELLOW = '\033[93m'
@@ -65,22 +52,14 @@ def three_word_solution(words, letters):
             
             # Print the possible combination
             print(f"{YELLOW}> three word solutions > possible combination > {(a,b,c)}{RESET}")
-            
-            # Increment the counter
-            counter += 1
     
 def four_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d in itertools.combinations(words, 4):
         # Check conditions for a valid solution
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and len(a) + len(b) + len(c) + len(d) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | {letter for letter in d} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             BLUE = '\033[94m'
@@ -89,12 +68,7 @@ def four_word_solution(words, letters):
             # Print the possible combination
             print(f"{BLUE}> four word solutions > possible combination > {(a,b,c,d)}{RESET}")
             
-            # Increment the counter
-            counter += 1
-            
 def five_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d, e in itertools.combinations(words, 5):
@@ -102,9 +76,6 @@ def five_word_solution(words, letters):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and len(a) + len(b) + len(c) + len(d) + len(e) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             MAGENTA = '\033[95m'
@@ -113,12 +84,7 @@ def five_word_solution(words, letters):
             # Print the possible combination
             print(f"{MAGENTA}> five word solutions > possible combination > {(a,b,c,d,e)}{RESET}")
             
-            # Increment the counter
-            counter += 1
-            
 def six_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d, e, f in itertools.combinations(words, 6):
@@ -126,9 +92,6 @@ def six_word_solution(words, letters):
         if a[-1] == b[0] and b[-1] == c[0] and c[-1] == d[0] and d[-1] == e[0] and e[-1] == f[0] and len(a) + len(b) + len(c) + len(d) + len(e) + len(f) >= 12 \
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             CYAN = '\033[96m'
@@ -137,12 +100,7 @@ def six_word_solution(words, letters):
             # Print the possible combination
             print(f"{CYAN}> six word solutions > possible combination > {(a,b,c,d,e,f)}{RESET}")
             
-            # Increment the counter
-            counter += 1
-            
 def seven_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d, e, f, g in itertools.combinations(words, 7):
@@ -161,12 +119,7 @@ def seven_word_solution(words, letters):
             # Print the possible combination
             print(f"{RED}> seven word solutions > possible combination > {(a,b,c,d,e,f,g)}{RESET}")
             
-            # Increment the counter
-            counter += 1
-            
 def eight_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d, e, f, g, h in itertools.combinations(words, 8):
@@ -175,9 +128,6 @@ def eight_word_solution(words, letters):
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
             {letter for letter in g} | {letter for letter in h} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             ORANGE = '\033[38;5;208m'
@@ -185,13 +135,8 @@ def eight_word_solution(words, letters):
             
             # Print the possible combination
             print(f"{ORANGE}> eight word solutions > possible combination > {(a,b,c,d,e,f,g,h)}{RESET}")
-            
-            # Increment the counter
-            counter += 1
         
 def nine_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d, e, f, g, h, i in itertools.combinations(words, 9):
@@ -200,9 +145,6 @@ def nine_word_solution(words, letters):
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
             {letter for letter in g} | {letter for letter in h} | {letter for letter in i} == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             PURPLE = '\033[38;5;129m'
@@ -211,12 +153,7 @@ def nine_word_solution(words, letters):
             # Print the possible combination
             print(f"{PURPLE}> nine word solutions > possible combination > {(a,b,c,d,e,f,g,h,i)}{RESET}")
             
-            # Increment the counter
-            counter += 1
-            
 def ten_word_solution(words, letters):
-    # Counter to limit the number of printed solutions
-    counter = 0
     
     # Iterate over combinations of ten words from the provided list
     for a, b, c, d, e, f, g, h, i, j in itertools.combinations(words, 10):
@@ -225,9 +162,6 @@ def ten_word_solution(words, letters):
             and {letter for letter in a} | {letter for letter in b} | {letter for letter in c} | \
             {letter for letter in d} | {letter for letter in e} | {letter for letter in f} | \
             {letter for letter in g} | {letter for letter in h} | {letter for letter in i} | {letter for letter in j}  == letters:
-            # Limit the number of printed solutions to 25
-            if counter == 25:                                                                                                                 ####################
-                break
             
             # Color codes for console output
             GRAY = '\033[38;5;240m'
@@ -235,9 +169,6 @@ def ten_word_solution(words, letters):
             
             # Print the possible combination
             print(f"{GRAY}> ten word solutions > possible combination > {(a,b,c,d,e,f,g,h,i,j)}{RESET}")
-            
-            # Increment the counter
-            counter += 1
 
 
 # Main function
@@ -279,13 +210,22 @@ def index():
         
         It is possible that some solutions do not work as the NYTimes game Letter Boxed does not have certain words in its list.
         
-        max. 251 combinations if you want to change, it do it in the code.
-        scripts/letterboxed.py
-        search the lines with 20 #
-        
+        If you encounter not working words, please add them to the not_working_letterboxed.txt
+        Make sure to seperate the words by line.
         
         """
     )
+    
+    
+    with open("not_working_letterboxed.txt", "r", encoding="utf-8") as file:
+        lines = file.readlines()
+        lines = [i.lower() for i in lines]
+        if len(lines) > 0:
+            with open("english-words/words_dictionary_letterboxed.json", "r", encoding="utf-8") as f:
+                data = json.load(f)
+            with open("english-words/words_dictionary_letterboxed.json", "w") as f:
+                data = {key: value for key, value in data.items() if not key.lower() in lines}
+                json.dump(data, f, indent=4, ensure_ascii=False)
     
     
     while True:
