@@ -16,6 +16,12 @@ def is_not_a_number(c):
     except ValueError:
         return True
 
+def find_duplicates(lst):
+    seen = set()
+    duplicates = set(x for x in lst if x in seen or seen.add(x))
+    return list(duplicates)
+
+
 # Function to filter words based on user input
 def filter_words(word, words):
     while True:
@@ -43,6 +49,24 @@ def filter_words(word, words):
     # Map user input to color codes
     inputs = {key: numV[val] for key, val in inputs.items()}
     
+    
+    if len({key for key, val in inputs.items()}) != len([key for key, val in inputs.items()]):
+        list_inputs = [key for key, val in inputs.items()]
+        list_inputs = find_duplicates(list_inputs)
+        
+        for i in list_inputs:
+            values = [val for key, val in inputs.items() if key[1:] == i]
+            keys = [key for key, val in inputs.items() if key[1:] == i]
+            
+            
+            if numV['g'] in values:
+                for index, val in enumerate(values):
+                    if val != numV['g']:
+                        inputs[keys[index]] = numV['y']
+                    elif val == numV['g']:
+                        inputs[keys[index]] = numV['g']
+    
+    
     # Filter words based on the user's input
     for index, vals in enumerate(inputs.items()):
         letter = vals[0][1:]
@@ -53,6 +77,9 @@ def filter_words(word, words):
             words = [word for word in words if word[index] != letter and letter in word]
         elif val == numV["b"]:
             words = [word for word in words if not letter in word]
+        
+            
+                
     
     
     return words
@@ -171,7 +198,11 @@ def index():
                     lines = file.readlines()
                     lines.append(not_working_word)
                 with open("not_working_wordle.txt", "w", encoding="utf-8") as file:
-                    file.writelines(lines)
+                    for index, i in enumerate(lines):
+                        if len(lines) - 1 == index:
+                            file.write(i)
+                            break
+                        file.write(i+"\n")
             else:
                 words = temp
             
