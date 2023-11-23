@@ -69,7 +69,7 @@ try:
                     data = json.load(f)
                     data = {key: val for key, val in data.items() if not key in lines}
                 with open("english-words/words_dictionary_wordle.json", "w") as f:
-                    json.dump(data, file, ensure_ascii=False, indent=4)
+                    json.dump(data, f, ensure_ascii=False, indent=4)
 except FileNotFoundError:
     with open("not_working_wordle.txt", "w") as file:
         file.write("")
