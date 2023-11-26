@@ -18,8 +18,15 @@ def is_not_a_number(c):
 
 def find_duplicates(lst):
     seen = set()
-    duplicates = set(x for x in lst if x in seen or seen.add(x))
-    return list(duplicates)
+    duplicates = []
+    
+    for i in lst:
+        if i in seen:
+            duplicates.append(i)
+        else:
+            seen.add(i)
+    
+    return duplicates
 
 
 # Function to filter words based on user input
@@ -49,9 +56,12 @@ def filter_words(word, words):
     # Map user input to color codes
     inputs = {key: numV[val] for key, val in inputs.items()}
     
+    set_inputs = {key[1:] for key, val in inputs.items()}
+    list_inputs = [key for key, val in inputs.items()]
     
-    if len({key for key, val in inputs.items()}) != len([key for key, val in inputs.items()]):
-        list_inputs = [key for key, val in inputs.items()]
+    
+    if len(set_inputs) < len(list_inputs):
+        list_inputs = [key[1:] for key, val in inputs.items()]
         list_inputs = find_duplicates(list_inputs)
         
         for i in list_inputs:
@@ -210,3 +220,7 @@ def index():
             print(e)
             print("sadly there are no correct words in the word list")
             break
+            
+
+if __name__ == "__main__":
+    index()
